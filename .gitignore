@@ -1,0 +1,95 @@
+# -------------------------------
+# OS-Specific
+# -------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.nfs*
+
+# -------------------------------
+# Python & Virtual Environments
+# -------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.sqlite
+*.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+
+# virtualenv / conda / poetry
+.venv/
+venv/
+env/
+ENV/
+conda-env/
+.poetry/
+.hypothesis/
+
+# -------------------------------
+# Jupyter Notebook
+# -------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Jupyter temporary files
+*.local.ipynb
+
+# -------------------------------
+# VS Code / Editors / IDEs
+# -------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# -------------------------------
+# Environment & Secrets
+# -------------------------------
+.env
+.env.*
+*.json.secret
+*.key
+*.token
+
+# -------------------------------
+# Data & Model Artifacts
+# (Keep small example data only)
+# -------------------------------
+data/raw/
+data/cache/
+models/
+checkpoints/
+wandb/
+mlruns/
+tensorboard/
+*.ckpt
+*.bin
+*.pt
+*.safetensors
+
+# Hugging Face cache
+huggingface/
+~/.cache/huggingface/
+hf_cache/
+
+# -------------------------------
+# Logs / Temp
+# -------------------------------
+*.log
+logs/
+tmp/
+temp/
