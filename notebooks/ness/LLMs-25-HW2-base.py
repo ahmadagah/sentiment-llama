@@ -1,4 +1,4 @@
-# Ness Blackbird homework 2.
+# Ness Blackbird homework 2, base model.
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from datasets import load_dataset
@@ -17,7 +17,6 @@ ds = load_dataset(
 )
 
 model_name = 'meta-llama/Llama-3.2-1B-Instruct'
-token = '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'
 tokenizer = AutoTokenizer.from_pretrained(model_name, token = token)
 tokenizer.padding_side = 'left'
 # It needs to be told to use its end-of-sequence token for padding.
@@ -41,6 +40,8 @@ counts = {s: 0 for s in sentiments}
 accurate = 0
 
 def extract_sentiment(output, label, prompt):
+    # Figure out what the model is trying to tell us. It unfortunately doesn't usually output
+    # just a one-word answer, but most of the time, the answer does include an answer, and just one.
     global accurate
     # Find any output matching the qualifiers.
     matches = re.findall(r"(positive|negative|neutral)", output.lower(), re.IGNORECASE)
@@ -63,6 +64,8 @@ for i in range(0, len(texts), batch_size):
     batch_texts = texts[i : i + batch_size]
     batch_labels = labels[i: i + batch_size]
 
+    # This is the 3-shot version. I'm not using any of the included neutral data points, because
+    # they tend to confuse it. Better results this way.
     base_prompt = 'Evaluate for sentiment (neutral, positive, negative): '
     prompts = [[
         # {'role': 'user', 'content': base_prompt + '"Trying to have a conversation with my dad about vegetarianism is the most pointless infuriating thing ever #caveman "'},

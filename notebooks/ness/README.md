@@ -1,4 +1,12 @@
-# These are just my notes for the homework report, but you can see accuracies here.
+Notes on the code.
+1. You want to look at LLMs-25-QLoRA.py.
+2. It asks you if you want to train the model, then decides which thing it's going to do. 
+2. The directory where the LoRA is stored is hard-coded -- in two places. So if you want to run it, you'll need to mess with that. Ditto the model it's loading from HF.
+3. Hopefully it's not too messy. I've made some changes that I probably haven't properly cleaned up from -- like getting the HF token from the .env file, which I learned from Ahmad.
+4. Jupyter notebooks are also a great idea, but I haven't tried to integrate them since finding out about them.
+
+
+These are just my notes for the homework report, but you can see accuracies here.
 
 
     base_prompt = 'Evaluate for sentiment (neutral, positive, negative): '
