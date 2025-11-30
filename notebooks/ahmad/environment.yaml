@@ -1,0 +1,34 @@
+name: llm-env
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - numpy
+  - psutil
+  - matplotlib
+  - scikit-learn
+  - datasets
+  - transformers
+  - tqdm
+  - ipykernel
+  - python-dotenv
+
+  # PyTorch stack (for Mac / MPS)
+  - pytorch
+  - torchvision
+  - torchaudio
+
+  # Make sure pip is available in the env
+  - pip
+
+  # Things that are easier via pip
+  - pip:
+      - peft
+      - bitsandbytes
+      - pyvis
+      - network
+      - safetensors
+      - jupytext
