@@ -1,0 +1,20 @@
+Llama 3.2 1B Instruct file summary
+
+Filename                                    Size                Parameters  Description
+---------------------------------------------------------------------------------------
+config.json                                865 B                         -  Model architecture definition.
+generation_config.json                     184 B                         -  Default text generation settings.
+model.safetensors                        4.60 GB                         -  Other file in the model directory.
+special_tokens_map.json                    296 B                         -  Mapping of special tokens.
+tokenizer.json                          16.41 MB                         -  Core tokenizer vocabulary and merge rules.
+tokenizer_config.json                   49.34 KB                         -  Tokenizer configuration.
+
+Model-level stats
+-----------------
+MODEL_ID: meta-llama/Llama-3.2-1B-Instruct
+Total parameters: 1,235,814,400 (~1.236 B)
+Vocab size: 128256
+Hidden size: 2048
+# Layers: 16
+# Attention heads: 32
+Max sequence length: 131072
