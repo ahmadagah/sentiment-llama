@@ -1,0 +1,14 @@
+torch
+numpy
+psutil
+matplotlib
+datasets
+transformers
+tqdm
+scikit-learn
+peft
+bitsandbytes
+
+
+
+ipykernel
